@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_margin="5dp"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@android:color/black">
 
     <ImageView
         android:id="@+id/ivBackdropImage"
@@ -20,15 +21,17 @@
 
     <TextView
         android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginStart="-6dp"
         android:layout_toEndOf="@+id/ivBackdropImage"
+        android:background="@android:color/black"
         android:text="Movie Title"
         android:textAppearance="@android:style/TextAppearance.Medium"
+        android:textColor="@android:color/holo_red_dark"
         tools:layout_editor_absoluteX="483dp"
-        tools:layout_editor_absoluteY="4dp" />
+        tools:layout_editor_absoluteY="4dp" />/>
 
     <TextView
         android:id="@+id/tvOverview"
@@ -38,5 +41,7 @@
         android:layout_toEndOf="@+id/ivBackdropImage"
         android:text="TextView"
         tools:layout_editor_absoluteX="483dp"
-        tools:layout_editor_absoluteY="29dp" />
+        tools:layout_editor_absoluteY="29dp"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"/>
 </RelativeLayout>
