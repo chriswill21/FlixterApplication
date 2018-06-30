@@ -29,6 +29,12 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
     // context for rendering image
     Context context;
 
+    // keys used for passing data between activities
+    public static final String ITEM_RATING = "vote_average";
+    public static final String ITEM_POPULARITY = "popularity";
+    public static final String ITEM_TITLE = "original_title";
+    public static final String ITEM_OVERVIEW = "overview";
+
     // initialize with list
 
     public void setConfig(Config config) {
@@ -95,6 +101,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
                 .apply(requestOptions)
                 .into(imageView);
 
+
     }
 
     // returns the total number of items in teh lsit
@@ -104,7 +111,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
     }
 
     // create the viewHolder as a static inner class
-    public static  class  ViewHolder extends RecyclerView.ViewHolder {
+    public class  ViewHolder extends RecyclerView.ViewHolder {
 
         // track view objects
         ImageView ivPosterImage;
@@ -118,7 +125,22 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             ivBackdropImage = (ImageView) itemView.findViewById(R.id.ivBackdropImage);
             tvOverview = (TextView) itemView.findViewById(R.id.tvOverview);
             tvTitle = (TextView) itemView.findViewById(R.id.tvTitle);
+
+
         }
+
+//        @Override
+//        public void onClick(View view) {
+//            // first parameter is the context, second is the class of the activity to launch
+//            Intent i = new Intent(context, RatingsAndPopularityActivity.class);
+//            // put "extras" into the bundle for access in the edit activity
+//            i.putExtra(ITEM_TITLE,  Movie.class.g;
+//            i.putExtra(ITEM_OVERVIEW, movie.get(position));
+//            i.putExtra(ITEM_RATING, movie.get(position));
+//            i.putExtra(ITEM_POPULARITY, position);
+//            // brings up the edit activity with the expectation of a result
+//            startActivityForResult(i, EDIT_REQUEST_CODE);
+//        }
     }
 }
 

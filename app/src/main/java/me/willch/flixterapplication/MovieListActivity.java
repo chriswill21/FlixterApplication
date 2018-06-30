@@ -162,4 +162,43 @@ public class MovieListActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
         }
     }
+
+
+//    private void setupListViewListener() {
+//        // set the ListView's itemLongClickListener
+//        rvMovies.callOnClick(new AdapterView.OnItemLongClickListener() {
+//            @Override
+//            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+//                // remove the item in the list at the index given by position
+//                items.remove(position);
+//                // notify the adapter that the underlying dataset changed
+//                itemsAdapter.notifyDataSetChanged();
+//                // return true to tell the framework that the long click was consumed
+//
+//                // store the updated list
+//                writeItems();
+//
+//                Log.i("MainActivity", "Removed item " + position);
+//
+//                return true;
+//            }
+//
+//        });
+//
+//        // set the ListView's itemClickListener
+//        lvItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                // first parameter is the context, second is the class of the activity to launch
+//                Intent i = new Intent(MainActivity.this, EditItemActivity.class);
+//                // put "extras" into the bundle for access in the edit activity
+//                i.putExtra(ITEM_TEXT, items.get(position));
+//                i.putExtra(ITEM_POSITION, position);
+//                // brings up the edit activity with the expectation of a result
+//                startActivityForResult(i, EDIT_REQUEST_CODE);
+//            }
+//        });
+//
+//
+//    }
 }
